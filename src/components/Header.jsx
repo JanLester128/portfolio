@@ -62,59 +62,113 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add('menu-open-lock');
+    } else {
+      document.body.classList.remove('menu-open-lock');
+    }
+    return () => {
+      document.body.classList.remove('menu-open-lock');
+    };
+  }, [menuOpen]);
+
+  // Close on Escape key
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape' && menuOpen) {
+        setMenuOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [menuOpen]);
+
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <header className={`header ${scrolled ? 'scrolled' : ''}`}>
-      <nav className="nav container" aria-label="Main navigation">
-        <a href="#home" className="logo" aria-label="Jan Lester Camus Portfolio">
-          <img
-            src={portfolio.logo || '/logo.png'}
-            alt="Jan Lester Logo"
-            className="logo-img"
-          />
-          <span className="logo-text">
-            Jan Lester<span>.</span>
-          </span>
-        </a>
+    <>
+      <header className={`header ${scrolled ? 'scrolled' : ''}`}>
+        <nav className="nav container" aria-label="Main navigation">
+          <a
+            href="#home"
+            className="logo"
+            aria-label="Jan Lester Camus Portfolio"
+            onClick={closeMenu}
+          >
+            <img
+              src={portfolio.logo || '/logo.png'}
+              alt="Jan Lester Logo"
+              className="logo-img"
+            />
+            <span className="logo-text">
+              Jan Lester<span>.</span>
+            </span>
+          </a>
 
-        <button
-          type="button"
-          className={`nav-toggle ${menuOpen ? 'open' : ''}`}
-          aria-expanded={menuOpen}
-          aria-controls="nav-menu"
-          aria-label="Toggle menu"
-          onClick={() => setMenuOpen((open) => !open)}
-        >
-          <span className="nav-toggle-bar" />
-          <span className="nav-toggle-bar" />
-          <span className="nav-toggle-bar" />
-        </button>
+          <div className="nav-right">
+            <ul className={`nav-menu ${menuOpen ? 'open' : ''}`} id="nav-menu">
+              {portfolio.navLinks.map((link) => (
+                <li key={link.id}>
+                  <a
+                    href={`#${link.id}`}
+                    className={`nav-link ${activeSection === link.id ? 'active' : ''}`}
+                    onClick={closeMenu}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+              <li className="nav-menu-theme-item">
+                <button
+                  type="button"
+                  className="theme-toggle-inline-btn"
+                  aria-label="Toggle dark mode"
+                  onClick={() => {
+                    toggleTheme();
+                    closeMenu();
+                  }}
+                >
+                  <ThemeIcon />
+                  <span>Switch Color Theme</span>
+                </button>
+              </li>
+            </ul>
 
-        <ul className={`nav-menu ${menuOpen ? 'open' : ''}`} id="nav-menu">
-          {portfolio.navLinks.map((link) => (
-            <li key={link.id}>
-              <a
-                href={`#${link.id}`}
-                className={`nav-link ${activeSection === link.id ? 'active' : ''}`}
-                onClick={closeMenu}
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-          <li>
             <button
               type="button"
-              className="theme-toggle"
+              className="theme-toggle header-theme-toggle"
               aria-label="Toggle dark mode"
               onClick={toggleTheme}
             >
               <ThemeIcon />
             </button>
-          </li>
-        </ul>
-      </nav>
-    </header>
+
+            <button
+              type="button"
+              className={`nav-toggle ${menuOpen ? 'open' : ''}`}
+              aria-expanded={menuOpen}
+              aria-controls="nav-menu"
+              aria-label="Toggle menu"
+              onClick={() => setMenuOpen((open) => !open)}
+            >
+              <span className="nav-toggle-bar" />
+              <span className="nav-toggle-bar" />
+              <span className="nav-toggle-bar" />
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      {/* Backdrop overlay on mobile when menu is active */}
+      {menuOpen && (
+        <div
+          className="nav-backdrop"
+          onClick={closeMenu}
+          aria-hidden="true"
+        />
+      )}
+    </>
   );
 }

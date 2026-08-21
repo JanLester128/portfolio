@@ -6,6 +6,7 @@ export default function Projects() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedProject, setSelectedProject] = useState(null);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [touchStartX, setTouchStartX] = useState(null);
 
   const filteredProjects =
     activeCategory === 'all'
@@ -33,6 +34,22 @@ export default function Projects() {
       prev === 0 ? selectedProject.images.length - 1 : prev - 1
     );
   }, [selectedProject]);
+
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.changedTouches[0].clientX);
+  };
+
+  const handleTouchEnd = (e) => {
+    if (touchStartX === null) return;
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX - touchEndX;
+    if (diff > 40) {
+      nextImage();
+    } else if (diff < -40) {
+      prevImage();
+    }
+    setTouchStartX(null);
+  };
 
   // Keyboard navigation for Lightbox
   useEffect(() => {
@@ -226,7 +243,11 @@ export default function Projects() {
               </button>
 
               <div className="lightbox-content">
-                <div className="lightbox-media-wrapper">
+                <div
+                  className="lightbox-media-wrapper"
+                  onTouchStart={handleTouchStart}
+                  onTouchEnd={handleTouchEnd}
+                >
                   {selectedProject.images && selectedProject.images[activeImageIndex] && (
                     <img
                       src={selectedProject.images[activeImageIndex].src}
