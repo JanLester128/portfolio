@@ -64,8 +64,8 @@ export default function Projects() {
             <span className="section-badge">Creative Portfolio</span>
             <h2 className="section-title">Featured Works & Outputs</h2>
             <p className="section-subtitle">
-              Explore my collection of web applications, custom systems, business cards,
-              and graphic design deliverables.
+              Explore my collection of web systems, posting layout designs, business cards,
+              posters, and graphic deliverables.
             </p>
           </div>
         </FadeIn>

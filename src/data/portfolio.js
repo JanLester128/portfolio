@@ -110,7 +110,7 @@ export const portfolio = {
   categories: [
     { id: 'all', label: 'All Works' },
     { id: 'web', label: 'Web Systems' },
-    { id: 'ui-layouts', label: 'System & UI Layouts' },
+    { id: 'posting-layouts', label: 'Posting Layouts' },
     { id: 'business-cards', label: 'Business Cards' },
     { id: 'posters', label: 'Posters & Media' },
     { id: 'branding', label: 'Branding & Graphics' },
@@ -134,8 +134,8 @@ export const portfolio = {
     },
     {
       id: 'dpwh-project',
-      category: 'ui-layouts',
-      categoryLabel: 'System & UI Layouts',
+      category: 'posting-layouts',
+      categoryLabel: 'Posting Layouts',
       title: 'DPWH Project Monitoring — Posting Layout',
       description:
         'Graphic layout and promotional showcase design created for social media posting of the DPWH Infrastructure Project Monitoring interface.',
@@ -150,8 +150,8 @@ export const portfolio = {
     },
     {
       id: 'eduvote',
-      category: 'ui-layouts',
-      categoryLabel: 'System & UI Layouts',
+      category: 'posting-layouts',
+      categoryLabel: 'Posting Layouts',
       title: 'EduVote Election System — Posting Layout',
       description:
         'Promotional presentation and social media posting layout highlighting both Admin Dashboard and Student Ballot interface features.',
@@ -170,8 +170,8 @@ export const portfolio = {
     },
     {
       id: 'infra-app',
-      category: 'ui-layouts',
-      categoryLabel: 'System & UI Layouts',
+      category: 'posting-layouts',
+      categoryLabel: 'Posting Layouts',
       title: 'InfraApp — Mobile & Web Posting Layout',
       description:
         'Multi-slide promotional graphics and social media layout designed to showcase mobile inspection tools and infrastructure management dashboards.',
@@ -250,8 +250,8 @@ export const portfolio = {
     },
     {
       id: 'web-mob-admission',
-      category: 'ui-layouts',
-      categoryLabel: 'System & UI Layouts',
+      category: 'posting-layouts',
+      categoryLabel: 'Posting Layouts',
       title: 'Web & Mobile Admission — Posting Layout',
       description:
         'Social media graphic layout showcasing the responsive student application and admission portal workflow for digital posting.',
@@ -265,8 +265,8 @@ export const portfolio = {
     },
     {
       id: 'accounting-system',
-      category: 'ui-layouts',
-      categoryLabel: 'System & UI Layouts',
+      category: 'posting-layouts',
+      categoryLabel: 'Posting Layouts',
       title: 'Accounting System — Posting Layout',
       description:
         'Social media presentation graphic designed to highlight accounting ledger modules, invoices, and financial overview screens.',
@@ -280,8 +280,8 @@ export const portfolio = {
     },
     {
       id: 'eadd-system',
-      category: 'ui-layouts',
-      categoryLabel: 'System & UI Layouts',
+      category: 'posting-layouts',
+      categoryLabel: 'Posting Layouts',
       title: 'E-Address (EADD) — Posting Layout',
       description:
         'Graphic layout and promotional visual crafted for posting the digital electronic address locator interface.',
@@ -325,12 +325,12 @@ export const portfolio = {
     },
     {
       id: 'ui-design-showcase',
-      category: 'ui-layouts',
-      categoryLabel: 'System & UI Layouts',
-      title: 'UI/UX Web & Mobile Layout Showcase',
+      category: 'posting-layouts',
+      categoryLabel: 'Posting Layouts',
+      title: 'Web & Mobile UI — Posting Layout Showcase',
       description:
         'Curated collection of graphic layouts, UI screens, and application mockup presentation graphics designed for posting and digital publication.',
-      tags: ['UI Layout Design', 'Mockup Presentation', 'Graphic Design', 'Photoshop'],
+      tags: ['Posting Layout Design', 'Mockup Presentation', 'Graphic Design', 'Photoshop'],
       images: [
         {
           src: '/Posting/Projects/1st (1).png',
@@ -360,7 +360,7 @@ export const portfolio = {
     { id: 'about', label: 'About' },
     { id: 'experience', label: 'Experience' },
     { id: 'skills', label: 'Skills' },
-    { id: 'projects', label: 'Portfolio Works' },
+    { id: 'projects', label: 'Works & Outputs' },
     { id: 'contact', label: 'Contact' },
   ],
 };
