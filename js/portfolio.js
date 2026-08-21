@@ -16,8 +16,8 @@ const data = {
   location: 'Philippines',
   contact: {
     phone: '+639500935788',
-    facebook: 'Jan Lester',
-    linkedin: '',
+    facebook: 'https://www.facebook.com/jnlstr01',
+    linkedin: 'https://www.linkedin.com/in/jan-lester-camus-182083413/',
     email: 'occ.camus.janlester@gmail.com',
   },
   about: [

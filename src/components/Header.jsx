@@ -68,7 +68,14 @@ export default function Header() {
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <nav className="nav container" aria-label="Main navigation">
         <a href="#home" className="logo" aria-label="Jan Lester Camus Portfolio">
-          Jan Lester<span>.</span>
+          <img
+            src={portfolio.logo || '/logo.png'}
+            alt="Jan Lester Logo"
+            className="logo-img"
+          />
+          <span className="logo-text">
+            Jan Lester<span>.</span>
+          </span>
         </a>
 
         <button

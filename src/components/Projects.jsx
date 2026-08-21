@@ -172,7 +172,6 @@ export default function Projects() {
                   <div className="project-body">
                     <div className="project-category-tag">{project.categoryLabel}</div>
                     <h3 className="project-card-title">{project.title}</h3>
-                    <p className="project-card-desc">{project.description}</p>
                     <div className="project-tags">
                       {project.tags.map((tag) => (
                         <span key={tag}>{tag}</span>
@@ -297,7 +296,6 @@ export default function Projects() {
                         {selectedProject.images[activeImageIndex].caption}
                       </p>
                     )}
-                  <p className="lightbox-desc">{selectedProject.description}</p>
                   <div className="project-tags">
                     {selectedProject.tags.map((tag) => (
                       <span key={tag}>{tag}</span>

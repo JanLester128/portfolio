@@ -14,9 +14,9 @@ export default function About() {
         <FadeIn className="about-grid">
           <div className="about-image-wrapper">
             <div className="about-avatar-card">
-              {portfolio.avatar ? (
+              {portfolio.cover || portfolio.avatar ? (
                 <img
-                  src={portfolio.avatar}
+                  src={portfolio.cover || '/cover.png'}
                   alt={portfolio.name}
                   className="about-avatar-img"
                 />
@@ -25,9 +25,6 @@ export default function About() {
                   <span>{portfolio.initials}</span>
                 </div>
               )}
-              <div className="about-badge">
-                <span className="badge-dot"></span> Available for Projects
-              </div>
             </div>
           </div>
           <div className="about-content">

@@ -9,23 +9,25 @@ export const portfolio = {
   location: 'El Salvador City, Northern Mindanao, Philippines',
   avatar: '/profile.png',
   cover: '/cover.png',
+  logo: '/logo.png',
   social: {
-    github: 'https://github.com',
-    linkedin: 'https://linkedin.com',
+    github: 'https://github.com/JanLester128',
+    facebook: 'https://www.facebook.com/jnlstr01',
+    linkedin: 'https://www.linkedin.com/in/jan-lester-camus-182083413/',
     email: 'mailto:occ.camus.janlester@gmail.com',
     phone: 'tel:09500935788',
   },
   about: {
     paragraphs: [
       "I am an Information Technology graduate specializing in multimedia, video editing, layout design, and web development. With professional experience as a Video Editor and Layout Artist intern at the Department of Public Works and Highways (DPWH – CDO 1st DEO), I have designed executive annual report layouts, produced public information videos, and developed creative visual materials for government and community initiatives.",
-      "Beyond multimedia design, I develop full-stack responsive web systems using HTML, CSS, JavaScript, PHP, and MySQL. Backed by extensive leadership experience as Class Mayor/President and Vice President of Interns at Opol Community College, I bring a balance of creative ingenuity, technical execution, and strong team coordination to every project.",
+      "Alongside multimedia and social media posting layout design, I develop responsive web systems like the ONSTS Management Platform using HTML, CSS, JavaScript, PHP, and MySQL. Backed by extensive leadership experience as Class Mayor/President and Vice President of Interns at Opol Community College, I bring a balance of creative ingenuity, technical execution, and strong team coordination to every project.",
     ],
     highlights: [
       'OJT Experience at DPWH CDO 1st DEO (Annual Report & Multimedia)',
       'BS in Information Technology — Opol Community College',
       'Leadership: Class Mayor/President & Vice President of Interns',
       'Proficient in Adobe Suite (Photoshop, Illustrator, Premiere Pro)',
-      'Full Web Stack: HTML5, CSS3, JavaScript, PHP, MySQL',
+      'Full Web Stack: HTML5, CSS, JavaScript, PHP, MySQL',
     ],
   },
   experience: [
@@ -54,7 +56,6 @@ export const portfolio = {
       leadership: [
         'Class Mayor (Class President) — Opol Community College Class Officers (2nd Year – 4th Year, 1st Sem)',
         'Vice President of Interns — Internship Program',
-        'Facilitated student meetings, managed student concerns, and coordinated university announcements.',
       ],
     },
   ],
@@ -87,7 +88,7 @@ export const portfolio = {
       category: 'Web & Systems Development',
       icon: '💻',
       skills: [
-        'HTML5 & CSS3',
+        'HTML5 & CSS',
         'JavaScript (ES6+)',
         'PHP & MySQL',
         'Responsive Web Design',
@@ -108,68 +109,85 @@ export const portfolio = {
   ],
   categories: [
     { id: 'all', label: 'All Works' },
-    { id: 'web', label: 'Web & Systems' },
+    { id: 'web', label: 'Web Systems' },
+    { id: 'ui-layouts', label: 'System & UI Layouts' },
     { id: 'business-cards', label: 'Business Cards' },
     { id: 'posters', label: 'Posters & Media' },
     { id: 'branding', label: 'Branding & Graphics' },
   ],
   projects: [
     {
-      id: 'dpwh-project',
+      id: 'onsts-system',
       category: 'web',
-      categoryLabel: 'Web & Systems',
-      title: 'DPWH Project Monitoring System',
+      categoryLabel: 'Web Systems',
+      title: 'ONSTS — Online Student Tracking System',
       description:
-        'Public works and highways infrastructure project management interface designed for structured progress tracking, milestone auditing, and reporting at DPWH.',
-      tags: ['Web System', 'UI/UX', 'Government Project', 'DPWH'],
+        'Full-stack online student tracking and record management system developed for institutional student monitoring, data administration, and academic tracking.',
+      tags: ['Developed System', 'Web Application', 'PHP & MySQL', 'Full-Stack'],
+      images: [
+        {
+          src: '/Posting/Projects/onsts.jpg',
+          caption: 'ONSTS Management Platform — Student Records & System Overview',
+        },
+      ],
+      featured: true,
+    },
+    {
+      id: 'dpwh-project',
+      category: 'ui-layouts',
+      categoryLabel: 'System & UI Layouts',
+      title: 'DPWH Project Monitoring — Posting Layout',
+      description:
+        'Graphic layout and promotional showcase design created for social media posting of the DPWH Infrastructure Project Monitoring interface.',
+      tags: ['Posting Layout', 'Graphic Design', 'DPWH Showcase', 'Photoshop'],
       images: [
         {
           src: '/Posting/Projects/DPWH.jpg',
-          caption: 'DPWH Project Monitoring Interface & Engineering Records',
+          caption: 'DPWH Project Monitoring Showcase — Social Media Posting Layout',
         },
       ],
       featured: true,
     },
     {
       id: 'eduvote',
-      category: 'web',
-      categoryLabel: 'Web & Systems',
-      title: 'EduVote — Online Voting System',
+      category: 'ui-layouts',
+      categoryLabel: 'System & UI Layouts',
+      title: 'EduVote Election System — Posting Layout',
       description:
-        'A comprehensive digital election platform featuring a dedicated administrative dashboard for candidate controls and student-side ballot casting interface.',
-      tags: ['Web System', 'UI/UX Design', 'Admin Portal', 'Student Portal', 'PHP/MySQL'],
+        'Promotional presentation and social media posting layout highlighting both Admin Dashboard and Student Ballot interface features.',
+      tags: ['Posting Layout', 'UI Presentation', 'Social Media Graphic', 'Photoshop'],
       images: [
         {
           src: '/Posting/EduVote/ADMIN SIDE.jpg',
-          caption: 'EduVote Admin Side — Election Dashboard & Candidate Controls',
+          caption: 'EduVote Admin Side — Presentation Layout',
         },
         {
           src: '/Posting/EduVote/STUD SIDE.png',
-          caption: 'EduVote Student Side — Secure Ballot Casting Interface',
+          caption: 'EduVote Student Side — Ballot Interface Layout',
         },
       ],
       featured: true,
     },
     {
       id: 'infra-app',
-      category: 'web',
-      categoryLabel: 'Web & Systems',
-      title: 'InfraApp — Infrastructure Management & Inspection',
+      category: 'ui-layouts',
+      categoryLabel: 'System & UI Layouts',
+      title: 'InfraApp — Mobile & Web Posting Layout',
       description:
-        'Modern mobile and web application interface for tracking municipal infrastructure, asset inspections, and ongoing field reports.',
-      tags: ['Mobile UI', 'Web App', 'System Design', 'Inspection App'],
+        'Multi-slide promotional graphics and social media layout designed to showcase mobile inspection tools and infrastructure management dashboards.',
+      tags: ['Posting Layout', 'Mobile UI Showcase', 'Social Media Graphic'],
       images: [
         {
           src: '/Posting/InfraApp/1st.png',
-          caption: 'InfraApp Feature Overview & Main Dashboard',
+          caption: 'InfraApp Feature Overview & Main Dashboard Layout',
         },
         {
           src: '/Posting/InfraApp/2nd.png',
-          caption: 'InfraApp Detailed Project Inspection View',
+          caption: 'InfraApp Detailed Project Inspection View Layout',
         },
         {
           src: '/Posting/InfraApp/3rd.jpg',
-          caption: 'InfraApp Status Tracking & Field Reports',
+          caption: 'InfraApp Status Tracking & Field Reports Layout',
         },
       ],
       featured: true,
@@ -232,61 +250,46 @@ export const portfolio = {
     },
     {
       id: 'web-mob-admission',
-      category: 'web',
-      categoryLabel: 'Web & Systems',
-      title: 'Web & Mobile Admission System',
+      category: 'ui-layouts',
+      categoryLabel: 'System & UI Layouts',
+      title: 'Web & Mobile Admission — Posting Layout',
       description:
-        'Responsive student admissions and application portal optimized for both desktop web and mobile devices with streamlined form workflows.',
-      tags: ['Web & Mobile', 'Admission Portal', 'UI/UX', 'Responsive'],
+        'Social media graphic layout showcasing the responsive student application and admission portal workflow for digital posting.',
+      tags: ['Posting Layout', 'Graphic Design', 'Promotional Media', 'Photoshop'],
       images: [
         {
           src: '/Posting/Projects/web&mob admission.jpg',
-          caption: 'Web & Mobile Admission Portal Interface',
+          caption: 'Web & Mobile Admission Portal — Posting Layout',
         },
       ],
     },
     {
       id: 'accounting-system',
-      category: 'web',
-      categoryLabel: 'Web & Systems',
-      title: 'Accounting & Financial Management System',
+      category: 'ui-layouts',
+      categoryLabel: 'System & UI Layouts',
+      title: 'Accounting System — Posting Layout',
       description:
-        'Financial dashboard and ledger management software interface for invoices, balance tracking, and accounting records.',
-      tags: ['Financial UI', 'Dashboard', 'Ledger System', 'Web Application'],
+        'Social media presentation graphic designed to highlight accounting ledger modules, invoices, and financial overview screens.',
+      tags: ['Posting Layout', 'Feature Presentation', 'Graphic Design'],
       images: [
         {
           src: '/Posting/Projects/accounting.jpg',
-          caption: 'Accounting System Overview & Records Screen',
-        },
-      ],
-    },
-    {
-      id: 'onsts-system',
-      category: 'web',
-      categoryLabel: 'Web & Systems',
-      title: 'ONSTS Management Platform',
-      description:
-        'Online student tracking and record management system designed for institutional data administration and student monitoring.',
-      tags: ['Student Tracking', 'Web Platform', 'Data Management'],
-      images: [
-        {
-          src: '/Posting/Projects/onsts.jpg',
-          caption: 'ONSTS System Administration & Overview',
+          caption: 'Accounting System Overview & Records Screen — Posting Layout',
         },
       ],
     },
     {
       id: 'eadd-system',
-      category: 'web',
-      categoryLabel: 'Web & Systems',
-      title: 'E-Address (EADD) Record System',
+      category: 'ui-layouts',
+      categoryLabel: 'System & UI Layouts',
+      title: 'E-Address (EADD) — Posting Layout',
       description:
-        'Digital address validation and electronic locator system interface for structured recordkeeping and location databases.',
-      tags: ['Record System', 'Database UI', 'Web Tool'],
+        'Graphic layout and promotional visual crafted for posting the digital electronic address locator interface.',
+      tags: ['Posting Layout', 'Graphic Design', 'Visual Presentation'],
       images: [
         {
           src: '/Posting/Projects/eadd.jpg',
-          caption: 'E-Address System Interface',
+          caption: 'E-Address System Interface — Posting Layout',
         },
       ],
     },
@@ -322,32 +325,32 @@ export const portfolio = {
     },
     {
       id: 'ui-design-showcase',
-      category: 'web',
-      categoryLabel: 'Web & Systems',
-      title: 'UI/UX Web Design & App Mockup Gallery',
+      category: 'ui-layouts',
+      categoryLabel: 'System & UI Layouts',
+      title: 'UI/UX Web & Mobile Layout Showcase',
       description:
-        'A comprehensive collection of modern web UI screens, responsive layout mockups, and application flow presentations.',
-      tags: ['UI Mockups', 'Web Showcase', 'Product Design', 'Visual Layouts'],
+        'Curated collection of graphic layouts, UI screens, and application mockup presentation graphics designed for posting and digital publication.',
+      tags: ['UI Layout Design', 'Mockup Presentation', 'Graphic Design', 'Photoshop'],
       images: [
         {
           src: '/Posting/Projects/1st (1).png',
-          caption: 'Web UI Design Showcase — Screen 1',
+          caption: 'Web UI Design Showcase — Screen 1 Layout',
         },
         {
           src: '/Posting/Projects/2nd (1).png',
-          caption: 'Web UI Design Showcase — Screen 2',
+          caption: 'Web UI Design Showcase — Screen 2 Layout',
         },
         {
           src: '/Posting/Projects/3rd.png',
-          caption: 'Web UI Design Showcase — Screen 3',
+          caption: 'Web UI Design Showcase — Screen 3 Layout',
         },
         {
           src: '/Posting/Projects/4th.png',
-          caption: 'Web UI Design Showcase — Screen 4',
+          caption: 'Web UI Design Showcase — Screen 4 Layout',
         },
         {
           src: '/Posting/Projects/5th.jpg',
-          caption: 'Web UI Design Showcase — Screen 5',
+          caption: 'Web UI Design Showcase — Screen 5 Layout',
         },
       ],
     },
