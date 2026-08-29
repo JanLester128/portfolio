@@ -1,5 +1,6 @@
 export const portfolio = {
   name: 'Jan Lester U. Camus',
+  shortName: 'Jan Lester',
   initials: 'JLC',
   title: 'Graphic Artist, Video Editor & Web Developer',
   tagline:

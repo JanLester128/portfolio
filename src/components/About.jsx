@@ -29,7 +29,7 @@ export default function About() {
           </div>
           <div className="about-content">
             <h3 className="about-lead">
-              Hi, I&apos;m <strong>{portfolio.name}</strong> — Graphic Artist & Web Developer.
+              Hi, I&apos;m <strong>{portfolio.shortName || 'Jan Lester'}</strong> — Graphic Artist & Web Developer.
             </h3>
             {portfolio.about.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
