@@ -62,7 +62,6 @@ export const portfolio = {
   skillCategories: [
     {
       category: 'Design & Multimedia',
-      icon: '🎨',
       skills: [
         'Adobe Photoshop',
         'Adobe Illustrator',
@@ -74,7 +73,6 @@ export const portfolio = {
     },
     {
       category: 'Video Editing & Motion',
-      icon: '🎬',
       skills: [
         'Adobe Premiere Pro',
         'CapCut',
@@ -86,7 +84,6 @@ export const portfolio = {
     },
     {
       category: 'Web & Systems Development',
-      icon: '💻',
       skills: [
         'HTML5 & CSS',
         'JavaScript (ES6+)',
@@ -98,7 +95,6 @@ export const portfolio = {
     },
     {
       category: 'IT, Tools & Leadership',
-      icon: '⭐',
       skills: [
         'Microsoft Office (Word, Excel, PowerPoint)',
         'Computer Troubleshooting & Maintenance',
@@ -122,8 +118,6 @@ export const portfolio = {
       category: 'internship-output',
       categoryLabel: 'Internship output',
       title: 'DPWH CDO 1st DEO — Annual Report Layout',
-      description:
-        'Comprehensive multi-page publication and editorial layout design for the Department of Public Works and Highways (DPWH – CDO 1st DEO) Annual Report. Features executive presentations, infrastructure project milestones, and organizational highlights created during internship.',
       tags: [
         'Internship Output',
         'Annual Report',
@@ -303,8 +297,6 @@ export const portfolio = {
       category: 'web',
       categoryLabel: 'Web Systems',
       title: 'ONSTS — Online Student Tracking System',
-      description:
-        'Full-stack online student tracking and record management system developed for institutional student monitoring, data administration, and academic tracking.',
       tags: ['Developed System', 'Web Application', 'PHP & MySQL', 'Full-Stack'],
       images: [
         {
@@ -319,8 +311,6 @@ export const portfolio = {
       category: 'posting-layouts',
       categoryLabel: 'Posting Layouts',
       title: 'DPWH Project Monitoring — Posting Layout',
-      description:
-        'Graphic layout and promotional showcase design created for social media posting of the DPWH Infrastructure Project Monitoring interface.',
       tags: ['Posting Layout', 'Graphic Design', 'DPWH Showcase', 'Photoshop'],
       images: [
         {
@@ -335,8 +325,6 @@ export const portfolio = {
       category: 'posting-layouts',
       categoryLabel: 'Posting Layouts',
       title: 'EduVote Election System — Posting Layout',
-      description:
-        'Promotional presentation and social media posting layout highlighting both Admin Dashboard and Student Ballot interface features.',
       tags: ['Posting Layout', 'UI Presentation', 'Social Media Graphic', 'Photoshop'],
       images: [
         {
@@ -355,8 +343,6 @@ export const portfolio = {
       category: 'posting-layouts',
       categoryLabel: 'Posting Layouts',
       title: 'InfraApp — Mobile & Web Posting Layout',
-      description:
-        'Multi-slide promotional graphics and social media layout designed to showcase mobile inspection tools and infrastructure management dashboards.',
       tags: ['Posting Layout', 'Mobile UI Showcase', 'Social Media Graphic'],
       images: [
         {
@@ -379,8 +365,6 @@ export const portfolio = {
       category: 'business-cards',
       categoryLabel: 'Business Cards',
       title: 'Corporate Minimalist Business Card',
-      description:
-        'Double-sided corporate business card featuring clean typography, structured contact layout, and modern QR code integration for instant digital networking.',
       tags: ['Print Design', 'Branding', 'Minimalist', 'QR Integration', 'Photoshop'],
       images: [
         {
@@ -399,8 +383,6 @@ export const portfolio = {
       category: 'business-cards',
       categoryLabel: 'Business Cards',
       title: 'Modern Dark Theme Business Card',
-      description:
-        'High-contrast professional business card design tailored for modern creative professionals with sleek geometric accents.',
       tags: ['Print Design', 'Dark Mode', 'Corporate Identity', 'Card Layout'],
       images: [
         {
@@ -419,8 +401,6 @@ export const portfolio = {
       category: 'posters',
       categoryLabel: 'Posters & Media',
       title: 'Haribon Publication & Event Poster',
-      description:
-        'Bold editorial poster design and visual art piece crafted for Haribon, featuring expressive layout composition and artistic typography.',
       tags: ['Graphic Art', 'Publication', 'Poster Design', 'Typography', 'Illustrator'],
       images: [
         {
@@ -435,8 +415,6 @@ export const portfolio = {
       category: 'posting-layouts',
       categoryLabel: 'Posting Layouts',
       title: 'Web & Mobile Admission — Posting Layout',
-      description:
-        'Social media graphic layout showcasing the responsive student application and admission portal workflow for digital posting.',
       tags: ['Posting Layout', 'Graphic Design', 'Promotional Media', 'Photoshop'],
       images: [
         {
@@ -450,8 +428,6 @@ export const portfolio = {
       category: 'posting-layouts',
       categoryLabel: 'Posting Layouts',
       title: 'Accounting System — Posting Layout',
-      description:
-        'Social media presentation graphic designed to highlight accounting ledger modules, invoices, and financial overview screens.',
       tags: ['Posting Layout', 'Feature Presentation', 'Graphic Design'],
       images: [
         {
@@ -465,8 +441,6 @@ export const portfolio = {
       category: 'posting-layouts',
       categoryLabel: 'Posting Layouts',
       title: 'E-Address (EADD) — Posting Layout',
-      description:
-        'Graphic layout and promotional visual crafted for posting the digital electronic address locator interface.',
       tags: ['Posting Layout', 'Graphic Design', 'Visual Presentation'],
       images: [
         {
@@ -480,8 +454,6 @@ export const portfolio = {
       category: 'posters',
       categoryLabel: 'Posters & Media',
       title: 'Social Media Announcement & Event Graphic',
-      description:
-        'Vibrant digital marketing poster tailored for social media engagement, announcements, and promotional campaigns.',
       tags: ['Social Media Art', 'Marketing Graphic', 'Promotional Poster', 'Photoshop'],
       images: [
         {
@@ -495,8 +467,6 @@ export const portfolio = {
       category: 'branding',
       categoryLabel: 'Branding & Graphics',
       title: 'Vector Brand Identity & Logo Design',
-      description:
-        'Custom vector identity mark, emblem, and brand assets created with precise geometric balance and timeless appeal.',
       tags: ['Brand Identity', 'Vector Art', 'Logo Design', 'Illustrator'],
       images: [
         {
@@ -510,8 +480,6 @@ export const portfolio = {
       category: 'posting-layouts',
       categoryLabel: 'Posting Layouts',
       title: 'Web & Mobile UI — Posting Layout Showcase',
-      description:
-        'Curated collection of graphic layouts, UI screens, and application mockup presentation graphics designed for posting and digital publication.',
       tags: ['Posting Layout Design', 'Mockup Presentation', 'Graphic Design', 'Photoshop'],
       images: [
         {

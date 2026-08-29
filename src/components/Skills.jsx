@@ -21,7 +21,6 @@ export default function Skills() {
             <FadeIn key={group.category}>
               <article className="skill-category-card">
                 <div className="skill-cat-header">
-                  <span className="skill-cat-icon">{group.icon}</span>
                   <h3 className="skill-cat-title">{group.category}</h3>
                 </div>
                 <ul className="skill-items-list">

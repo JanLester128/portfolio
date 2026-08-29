@@ -20,7 +20,7 @@ export default function Experience() {
           {/* Work Experience */}
           <div className="exp-column">
             <h3 className="column-heading">
-              <span className="heading-icon">💼</span> Professional Experience
+              <span className="heading-icon"></span> Professional Experience
             </h3>
             <div className="timeline">
               {portfolio.experience.map((exp) => (
@@ -55,7 +55,7 @@ export default function Experience() {
           {/* Education & Leadership */}
           <div className="exp-column">
             <h3 className="column-heading">
-              <span className="heading-icon">🎓</span> Education & Leadership
+              <span className="heading-icon"></span> Education & Leadership
             </h3>
             <div className="timeline">
               {portfolio.education.map((edu) => (
@@ -69,9 +69,9 @@ export default function Experience() {
                       <span className="timeline-period graduation-tag">{edu.graduation}</span>
                     </div>
                     <p className="timeline-location">📍 {edu.location}</p>
-                    
+
                     <div className="leadership-section">
-                      <h5 className="leadership-title">🏆 Leadership & Campus Roles</h5>
+                      <h5 className="leadership-title">Leadership & Campus Roles</h5>
                       <ul className="timeline-bullets">
                         {edu.leadership.map((lead, i) => (
                           <li key={i}>{lead}</li>

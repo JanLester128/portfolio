@@ -12,12 +12,12 @@ export default function Hero() {
           <h1 className="hero-name">{portfolio.name}</h1>
           <p className="hero-title">{portfolio.title}</p>
           <p className="hero-description">{portfolio.tagline}</p>
-          
+
           <div className="hero-actions">
             <a href="#projects" className="btn btn-primary">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
               </svg>
               View My Portfolio
             </a>
@@ -50,7 +50,7 @@ export default function Hero() {
               title="Facebook"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
               </svg>
             </a>
             <a
@@ -81,10 +81,10 @@ export default function Hero() {
               className="hero-avatar-img"
             />
             <div className="hero-badge-tag design-badge">
-              <span className="badge-icon">🎨</span> Graphic Artist
+              <span className="badge-icon"></span> Graphic Artist
             </div>
             <div className="hero-badge-tag code-badge">
-              <span className="badge-icon">⚡</span> Web Developer
+              <span className="badge-icon"></span> Web Developer
             </div>
           </div>
         </div>
