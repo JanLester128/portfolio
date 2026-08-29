@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { portfolio } from '../data/portfolio';
 import FadeIn from './FadeIn';
 
@@ -7,6 +7,7 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [touchStartX, setTouchStartX] = useState(null);
+  const thumbRefs = useRef({});
 
   const filteredProjects =
     activeCategory === 'all'
@@ -72,6 +73,17 @@ export default function Projects() {
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [selectedProject, nextImage, prevImage]);
+
+  // Auto-scroll active thumbnail into view
+  useEffect(() => {
+    if (selectedProject && thumbRefs.current[activeImageIndex]) {
+      thumbRefs.current[activeImageIndex].scrollIntoView({
+        behavior: 'smooth',
+        inline: 'center',
+        block: 'nearest',
+      });
+    }
+  }, [activeImageIndex, selectedProject]);
 
   return (
     <section className="section" id="projects">
@@ -284,6 +296,7 @@ export default function Projects() {
                     {selectedProject.images.map((img, idx) => (
                       <button
                         key={img.src}
+                        ref={(el) => (thumbRefs.current[idx] = el)}
                         type="button"
                         className={`lightbox-thumb-btn ${
                           activeImageIndex === idx ? 'active' : ''
@@ -317,6 +330,9 @@ export default function Projects() {
                         {selectedProject.images[activeImageIndex].caption}
                       </p>
                     )}
+                  {selectedProject.description && (
+                    <p className="lightbox-desc">{selectedProject.description}</p>
+                  )}
                   <div className="project-tags">
                     {selectedProject.tags.map((tag) => (
                       <span key={tag}>{tag}</span>

@@ -109,6 +109,7 @@ export const portfolio = {
   ],
   categories: [
     { id: 'all', label: 'All Works' },
+    { id: 'internship-output', label: 'Internship output' },
     { id: 'web', label: 'Web Systems' },
     { id: 'posting-layouts', label: 'Posting Layouts' },
     { id: 'business-cards', label: 'Business Cards' },
@@ -116,6 +117,187 @@ export const portfolio = {
     { id: 'branding', label: 'Branding & Graphics' },
   ],
   projects: [
+    {
+      id: 'dpwh-annual-report',
+      category: 'internship-output',
+      categoryLabel: 'Internship output',
+      title: 'DPWH CDO 1st DEO — Annual Report Layout',
+      description:
+        'Comprehensive multi-page publication and editorial layout design for the Department of Public Works and Highways (DPWH – CDO 1st DEO) Annual Report. Features executive presentations, infrastructure project milestones, and organizational highlights created during internship.',
+      tags: [
+        'Internship Output',
+        'Annual Report',
+        'Publication Design',
+        'Photoshop & Illustrator',
+      ],
+      images: [
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/FRONT PAGE.jpg',
+          caption: 'DPWH Annual Report — Front Cover Layout',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/About Cover.jpg',
+          caption: 'DPWH Annual Report — District Profile & Executive Summary',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/TABLE OF CONTENTS.jpg',
+          caption: 'DPWH Annual Report — Table of Contents & Structure',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/1.jpg',
+          caption: 'DPWH Annual Report — Page 01',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/2.jpg',
+          caption: 'DPWH Annual Report — Page 02',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/3.png',
+          caption: 'DPWH Annual Report — Page 03',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/4.png',
+          caption: 'DPWH Annual Report — Page 04',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/5.jpg',
+          caption: 'DPWH Annual Report — Page 05',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/6.jpg',
+          caption: 'DPWH Annual Report — Page 06',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/7.jpg',
+          caption: 'DPWH Annual Report — Page 07',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/8.jpg',
+          caption: 'DPWH Annual Report — Page 08',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/9.jpg',
+          caption: 'DPWH Annual Report — Page 09',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/10.jpg',
+          caption: 'DPWH Annual Report — Page 10',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/11.jpg',
+          caption: 'DPWH Annual Report — Page 11',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/12.jpg',
+          caption: 'DPWH Annual Report — Page 12',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/13.jpg',
+          caption: 'DPWH Annual Report — Page 13',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/14.jpg',
+          caption: 'DPWH Annual Report — Page 14',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/15.jpg',
+          caption: 'DPWH Annual Report — Page 15',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/16.jpg',
+          caption: 'DPWH Annual Report — Page 16',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/17.jpg',
+          caption: 'DPWH Annual Report — Page 17',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/18.jpg',
+          caption: 'DPWH Annual Report — Page 18',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/19.jpg',
+          caption: 'DPWH Annual Report — Page 19',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/20.jpg',
+          caption: 'DPWH Annual Report — Page 20',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/21.jpg',
+          caption: 'DPWH Annual Report — Page 21',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/22.jpg',
+          caption: 'DPWH Annual Report — Page 22',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/23.jpg',
+          caption: 'DPWH Annual Report — Page 23',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/24.jpg',
+          caption: 'DPWH Annual Report — Page 24',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/25.jpg',
+          caption: 'DPWH Annual Report — Page 25',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/26.jpg',
+          caption: 'DPWH Annual Report — Page 26',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/27.jpg',
+          caption: 'DPWH Annual Report — Page 27',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/28.jpg',
+          caption: 'DPWH Annual Report — Page 28',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/29.jpg',
+          caption: 'DPWH Annual Report — Page 29',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/30.jpg',
+          caption: 'DPWH Annual Report — Page 30',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/31.jpg',
+          caption: 'DPWH Annual Report — Page 31',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/32.jpg',
+          caption: 'DPWH Annual Report — Page 32',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/33.jpg',
+          caption: 'DPWH Annual Report — Page 33',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/34.jpg',
+          caption: 'DPWH Annual Report — Page 34',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/35.jpg',
+          caption: 'DPWH Annual Report — Page 35',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/36.jpg',
+          caption: 'DPWH Annual Report — Page 36',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/LAST PAGE.jpg',
+          caption: 'DPWH Annual Report — Back Cover / Concluding Page',
+        },
+        {
+          src: '/ANNUAL REPORT DPWH CDO 1ST DEO/COVERPAGE Front and Back.jpg',
+          caption: 'DPWH Annual Report — Full Spread Cover (Front & Back Spread)',
+        },
+      ],
+      featured: true,
+    },
     {
       id: 'onsts-system',
       category: 'web',
