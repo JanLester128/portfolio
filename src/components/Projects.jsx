@@ -128,13 +128,14 @@ export default function Projects() {
         {/* Projects Grid */}
         <div className="projects-grid">
           {filteredProjects.map((project) => {
+            const isVideo = Boolean(project.video || project.mediaType === 'video');
             const hasMultipleImages = project.images && project.images.length > 1;
             const coverImage = project.images && project.images[0] ? project.images[0].src : '';
 
             return (
               <FadeIn key={project.id}>
                 <article
-                  className="project-card"
+                  className={`project-card ${isVideo ? 'project-card-video' : ''}`}
                   onClick={() => openLightbox(project, 0)}
                   tabIndex={0}
                   role="button"
@@ -147,35 +148,94 @@ export default function Projects() {
                   aria-label={`View ${project.title}`}
                 >
                   <div className="project-image-container">
-                    <img
-                      src={coverImage}
-                      alt={project.title}
-                      className="project-cover-img"
-                      loading="lazy"
-                    />
+                    {isVideo ? (
+                      <div className="project-video-thumb-wrap">
+                        <video
+                          src={`${project.video}#t=0.001`}
+                          className="project-cover-video"
+                          preload="metadata"
+                          muted
+                          playsInline
+                        />
+                        <div className="project-video-play-btn" aria-hidden="true">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="28"
+                            height="28"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                          >
+                            <polygon points="5 3 19 12 5 21 5 3" />
+                          </svg>
+                        </div>
+                      </div>
+                    ) : (
+                      <img
+                        src={coverImage}
+                        alt={project.title}
+                        className="project-cover-img"
+                        loading="lazy"
+                      />
+                    )}
+
                     <div className="project-image-overlay">
                       <span className="view-badge">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="18"
-                          height="18"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          aria-hidden="true"
-                        >
-                          <circle cx="11" cy="11" r="8" />
-                          <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                          <line x1="11" y1="8" x2="11" y2="14" />
-                          <line x1="8" y1="11" x2="14" y2="11" />
-                        </svg>
-                        View Full Output
+                        {isVideo ? (
+                          <>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="18"
+                              height="18"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              aria-hidden="true"
+                            >
+                              <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Video
+                          </>
+                        ) : (
+                          <>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="18"
+                              height="18"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              aria-hidden="true"
+                            >
+                              <circle cx="11" cy="11" r="8" />
+                              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                              <line x1="11" y1="8" x2="11" y2="14" />
+                              <line x1="8" y1="11" x2="14" y2="11" />
+                            </svg>
+                            View Full Output
+                          </>
+                        )}
                       </span>
                     </div>
-                    {hasMultipleImages && (
+
+                    {isVideo && (
+                      <span className="multi-img-badge video-badge">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <polygon points="5 3 19 12 5 21 5 3" />
+                        </svg>
+                        Video Edit
+                      </span>
+                    )}
+
+                    {!isVideo && hasMultipleImages && (
                       <span className="multi-img-badge">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -201,14 +261,9 @@ export default function Projects() {
                   <div className="project-body">
                     <div className="project-category-tag">{project.categoryLabel}</div>
                     <h3 className="project-card-title">{project.title}</h3>
-                    <div className="project-tags">
-                      {project.tags.map((tag) => (
-                        <span key={tag}>{tag}</span>
-                      ))}
-                    </div>
                     <div className="project-action-row">
                       <span className="view-detail-link">
-                        Preview Details &rarr;
+                        {isVideo ? 'Play Video \u2192' : 'Preview Details \u2192'}
                       </span>
                     </div>
                   </div>
@@ -228,7 +283,9 @@ export default function Projects() {
             aria-label={selectedProject.title}
           >
             <div
-              className="lightbox-container"
+              className={`lightbox-container ${
+                selectedProject.video ? 'lightbox-container-video' : ''
+              }`}
               onClick={(e) => e.stopPropagation()}
             >
               <button
@@ -260,55 +317,73 @@ export default function Projects() {
                   onTouchStart={handleTouchStart}
                   onTouchEnd={handleTouchEnd}
                 >
-                  {selectedProject.images && selectedProject.images[activeImageIndex] && (
-                    <img
-                      src={selectedProject.images[activeImageIndex].src}
-                      alt={selectedProject.images[activeImageIndex].caption || selectedProject.title}
-                      className="lightbox-img"
+                  {selectedProject.video ? (
+                    <video
+                      src={selectedProject.video}
+                      controls
+                      autoPlay
+                      playsInline
+                      className="lightbox-video"
                     />
+                  ) : (
+                    selectedProject.images &&
+                    selectedProject.images[activeImageIndex] && (
+                      <img
+                        src={selectedProject.images[activeImageIndex].src}
+                        alt={
+                          selectedProject.images[activeImageIndex].caption ||
+                          selectedProject.title
+                        }
+                        className="lightbox-img"
+                      />
+                    )
                   )}
 
-                  {selectedProject.images && selectedProject.images.length > 1 && (
-                    <>
-                      <button
-                        type="button"
-                        className="lightbox-nav-btn prev"
-                        onClick={prevImage}
-                        aria-label="Previous image"
-                      >
-                        &#10094;
-                      </button>
-                      <button
-                        type="button"
-                        className="lightbox-nav-btn next"
-                        onClick={nextImage}
-                        aria-label="Next image"
-                      >
-                        &#10095;
-                      </button>
-                    </>
-                  )}
+                  {!selectedProject.video &&
+                    selectedProject.images &&
+                    selectedProject.images.length > 1 && (
+                      <>
+                        <button
+                          type="button"
+                          className="lightbox-nav-btn prev"
+                          onClick={prevImage}
+                          aria-label="Previous image"
+                        >
+                          &#10094;
+                        </button>
+                        <button
+                          type="button"
+                          className="lightbox-nav-btn next"
+                          onClick={nextImage}
+                          aria-label="Next image"
+                        >
+                          &#10095;
+                        </button>
+                      </>
+                    )}
                 </div>
 
                 {/* Thumbnails if multiple images */}
-                {selectedProject.images && selectedProject.images.length > 1 && (
-                  <div className="lightbox-thumbnails">
-                    {selectedProject.images.map((img, idx) => (
-                      <button
-                        key={img.src}
-                        ref={(el) => (thumbRefs.current[idx] = el)}
-                        type="button"
-                        className={`lightbox-thumb-btn ${
-                          activeImageIndex === idx ? 'active' : ''
-                        }`}
-                        onClick={() => setActiveImageIndex(idx)}
-                        aria-label={`View image ${idx + 1}`}
-                      >
-                        <img src={img.src} alt="" />
-                      </button>
-                    ))}
-                  </div>
-                )}
+                {!selectedProject.video &&
+                  selectedProject.images &&
+                  selectedProject.images.length > 1 && (
+                    <div className="lightbox-thumbnails">
+                      {selectedProject.images.map((img, idx) => (
+                        <button
+                          key={img.src}
+                          ref={(el) => (thumbRefs.current[idx] = el)}
+                          type="button"
+                          className={`lightbox-thumb-btn ${
+                            activeImageIndex === idx ? 'active' : ''
+                          }`}
+                          onClick={() => setActiveImageIndex(idx)}
+                          aria-label={`View image ${idx + 1}`}
+                        >
+                          <img src={img.src} alt="" />
+                        </button>
+                      ))}
+                    </div>
+                  )}
 
                 {/* Modal Footer / Information */}
                 <div className="lightbox-info">
@@ -316,9 +391,16 @@ export default function Projects() {
                     <span className="project-category-tag">
                       {selectedProject.categoryLabel}
                     </span>
-                    {selectedProject.images && selectedProject.images.length > 1 && (
-                      <span className="lightbox-counter">
-                        {activeImageIndex + 1} of {selectedProject.images.length}
+                    {!selectedProject.video &&
+                      selectedProject.images &&
+                      selectedProject.images.length > 1 && (
+                        <span className="lightbox-counter">
+                          {activeImageIndex + 1} of {selectedProject.images.length}
+                        </span>
+                      )}
+                    {selectedProject.video && (
+                      <span className="lightbox-counter video-pill-counter">
+                        HD Video
                       </span>
                     )}
                   </div>
@@ -333,11 +415,6 @@ export default function Projects() {
                   {selectedProject.description && (
                     <p className="lightbox-desc">{selectedProject.description}</p>
                   )}
-                  <div className="project-tags">
-                    {selectedProject.tags.map((tag) => (
-                      <span key={tag}>{tag}</span>
-                    ))}
-                  </div>
                 </div>
               </div>
             </div>

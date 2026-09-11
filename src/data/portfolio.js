@@ -107,6 +107,7 @@ export const portfolio = {
   categories: [
     { id: 'all', label: 'All Works' },
     { id: 'internship-output', label: 'Internship output' },
+    { id: 'video-editing', label: 'Video Editing' },
     { id: 'web', label: 'Web Systems' },
     { id: 'posting-layouts', label: 'Posting Layouts' },
     { id: 'business-cards', label: 'Business Cards' },
@@ -115,16 +116,32 @@ export const portfolio = {
   ],
   projects: [
     {
+      id: 'video-kevin-hart',
+      category: 'video-editing',
+      categoryLabel: 'Video Editing',
+      title: 'Kevin Hart — Dynamic Video Edit & Reel',
+      mediaType: 'video',
+      video: '/video/kevin_hart.mp4',
+      description:
+        'High-energy short-form video edit showcasing sharp pacing, beat-synced cuts, styled typography, and sound design for social media platforms.',
+      featured: true,
+    },
+    {
+      id: 'video-myday',
+      category: 'video-editing',
+      categoryLabel: 'Video Editing',
+      title: 'MyDay — Social Story Video Montage',
+      mediaType: 'video',
+      video: '/video/Myday.mp4',
+      description:
+        'Creative social media story edit highlighting smooth transitions, aesthetic color grading, and seamless audio synchronization.',
+      featured: true,
+    },
+    {
       id: 'dpwh-annual-report',
       category: 'internship-output',
       categoryLabel: 'Internship output',
       title: 'DPWH CDO 1st DEO — Annual Report Layout',
-      tags: [
-        'Internship Output',
-        'Annual Report',
-        'Publication Design',
-        'Photoshop & Illustrator',
-      ],
       images: [
         {
           src: '/ANNUAL REPORT DPWH CDO 1ST DEO/FRONT PAGE.jpg',
@@ -298,7 +315,6 @@ export const portfolio = {
       category: 'web',
       categoryLabel: 'Web Systems',
       title: 'ONSTS — Online Student Tracking System',
-      tags: ['Developed System', 'Web Application', 'PHP & MySQL', 'Full-Stack'],
       images: [
         {
           src: '/Posting/Projects/onsts.jpg',
@@ -312,7 +328,6 @@ export const portfolio = {
       category: 'posting-layouts',
       categoryLabel: 'Posting Layouts',
       title: 'DPWH Project Monitoring — Posting Layout',
-      tags: ['Posting Layout', 'Graphic Design', 'DPWH Showcase', 'Photoshop'],
       images: [
         {
           src: '/Posting/Projects/DPWH.jpg',
@@ -326,7 +341,6 @@ export const portfolio = {
       category: 'posting-layouts',
       categoryLabel: 'Posting Layouts',
       title: 'EduVote Election System — Posting Layout',
-      tags: ['Posting Layout', 'UI Presentation', 'Social Media Graphic', 'Photoshop'],
       images: [
         {
           src: '/Posting/EduVote/ADMIN SIDE.jpg',
@@ -344,7 +358,6 @@ export const portfolio = {
       category: 'posting-layouts',
       categoryLabel: 'Posting Layouts',
       title: 'InfraApp — Mobile & Web Posting Layout',
-      tags: ['Posting Layout', 'Mobile UI Showcase', 'Social Media Graphic'],
       images: [
         {
           src: '/Posting/InfraApp/1st.png',
@@ -366,7 +379,6 @@ export const portfolio = {
       category: 'business-cards',
       categoryLabel: 'Business Cards',
       title: 'Corporate Minimalist Business Card',
-      tags: ['Print Design', 'Branding', 'Minimalist', 'QR Integration', 'Photoshop'],
       images: [
         {
           src: '/Business Cards/Front.png',
@@ -384,7 +396,6 @@ export const portfolio = {
       category: 'business-cards',
       categoryLabel: 'Business Cards',
       title: 'Modern Dark Theme Business Card',
-      tags: ['Print Design', 'Dark Mode', 'Corporate Identity', 'Card Layout'],
       images: [
         {
           src: '/Business Cards/Front (1).png',
@@ -402,7 +413,6 @@ export const portfolio = {
       category: 'posters',
       categoryLabel: 'Posters & Media',
       title: 'Haribon Publication & Event Poster',
-      tags: ['Graphic Art', 'Publication', 'Poster Design', 'Typography', 'Illustrator'],
       images: [
         {
           src: '/Posting/Haribon/HARIBON.jpg',
@@ -416,7 +426,6 @@ export const portfolio = {
       category: 'posting-layouts',
       categoryLabel: 'Posting Layouts',
       title: 'Web & Mobile Admission — Posting Layout',
-      tags: ['Posting Layout', 'Graphic Design', 'Promotional Media', 'Photoshop'],
       images: [
         {
           src: '/Posting/Projects/web&mob admission.jpg',
@@ -429,7 +438,6 @@ export const portfolio = {
       category: 'posting-layouts',
       categoryLabel: 'Posting Layouts',
       title: 'Accounting System — Posting Layout',
-      tags: ['Posting Layout', 'Feature Presentation', 'Graphic Design'],
       images: [
         {
           src: '/Posting/Projects/accounting.jpg',
@@ -442,7 +450,6 @@ export const portfolio = {
       category: 'posting-layouts',
       categoryLabel: 'Posting Layouts',
       title: 'E-Address (EADD) — Posting Layout',
-      tags: ['Posting Layout', 'Graphic Design', 'Visual Presentation'],
       images: [
         {
           src: '/Posting/Projects/eadd.jpg',
@@ -455,7 +462,6 @@ export const portfolio = {
       category: 'posters',
       categoryLabel: 'Posters & Media',
       title: 'Social Media Announcement & Event Graphic',
-      tags: ['Social Media Art', 'Marketing Graphic', 'Promotional Poster', 'Photoshop'],
       images: [
         {
           src: '/Posting/For Posting.jpg',
@@ -468,7 +474,6 @@ export const portfolio = {
       category: 'branding',
       categoryLabel: 'Branding & Graphics',
       title: 'Vector Brand Identity & Logo Design',
-      tags: ['Brand Identity', 'Vector Art', 'Logo Design', 'Illustrator'],
       images: [
         {
           src: '/Posting/LOGO1.png',
@@ -481,7 +486,6 @@ export const portfolio = {
       category: 'posting-layouts',
       categoryLabel: 'Posting Layouts',
       title: 'Web & Mobile UI — Posting Layout Showcase',
-      tags: ['Posting Layout Design', 'Mockup Presentation', 'Graphic Design', 'Photoshop'],
       images: [
         {
           src: '/Posting/Projects/1st (1).png',
