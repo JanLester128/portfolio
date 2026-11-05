@@ -3,14 +3,13 @@ import { portfolio } from '../data/portfolio';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 import { useTheme } from '../hooks/useTheme';
 
-function ThemeIcon() {
-  return (
-    <>
+function ThemeIcon({ theme }) {
+  if (theme === 'dark') {
+    return (
       <svg
-        className="icon-sun"
         xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
+        width="18"
+        height="18"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -29,40 +28,41 @@ function ThemeIcon() {
         <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
       </svg>
-      <svg
-        className="icon-moon"
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-      >
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-      </svg>
-    </>
+    );
+  }
+
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
   );
 }
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
   const sectionIds = portfolio.navLinks.map((link) => link.id);
   const activeSection = useScrollSpy(sectionIds);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleScroll = () => setScrolled(window.scrollY > 16);
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Lock body scroll when mobile menu is open
   useEffect(() => {
     if (menuOpen) {
       document.body.classList.add('menu-open-lock');
@@ -74,7 +74,6 @@ export default function Header() {
     };
   }, [menuOpen]);
 
-  // Close on Escape key
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape' && menuOpen) {
@@ -130,8 +129,8 @@ export default function Header() {
                     closeMenu();
                   }}
                 >
-                  <ThemeIcon />
-                  <span>Switch Color Theme</span>
+                  <ThemeIcon theme={theme} />
+                  <span>{theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}</span>
                 </button>
               </li>
             </ul>
@@ -139,10 +138,14 @@ export default function Header() {
             <button
               type="button"
               className="theme-toggle header-theme-toggle"
-              aria-label="Toggle dark mode"
+              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
               onClick={toggleTheme}
             >
-              <ThemeIcon />
+              <ThemeIcon theme={theme} />
+              <span className="theme-toggle-label">
+                {theme === 'dark' ? 'Light' : 'Dark'}
+              </span>
             </button>
 
             <button
@@ -161,7 +164,6 @@ export default function Header() {
         </nav>
       </header>
 
-      {/* Backdrop overlay on mobile when menu is active */}
       {menuOpen && (
         <div
           className="nav-backdrop"

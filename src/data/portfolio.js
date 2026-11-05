@@ -106,6 +106,7 @@ export const portfolio = {
   ],
   categories: [
     { id: 'all', label: 'All Works' },
+    { id: 'pubmat', label: 'PUBMAT' },
     { id: 'internship-output', label: 'Internship output' },
     { id: 'video-editing', label: 'Video Editing' },
     { id: 'web', label: 'Web Systems' },
@@ -115,6 +116,96 @@ export const portfolio = {
     { id: 'branding', label: 'Branding & Graphics' },
   ],
   projects: [
+    {
+      id: 'pubmat-mcdo',
+      category: 'pubmat',
+      categoryLabel: 'PUBMAT',
+      title: "McDonald's — Promotional Pubmat Design",
+      images: [
+        {
+          src: '/pubmat/mcdo.jpg',
+          caption: "McDonald's Cheeseburger & Fries — Promotional Social Media Pubmat",
+        },
+      ],
+      featured: true,
+    },
+    {
+      id: 'pubmat-pal',
+      category: 'pubmat',
+      categoryLabel: 'PUBMAT',
+      title: 'Philippine Airlines — Travel Campaign Pubmat',
+      images: [
+        {
+          src: '/pubmat/PAL.jpg',
+          caption: 'Philippine Airlines "Care in Every Journey" — Travel Promo Pubmat',
+        },
+      ],
+      featured: true,
+    },
+    {
+      id: 'pubmat-toyota',
+      category: 'pubmat',
+      categoryLabel: 'PUBMAT',
+      title: 'Toyota Hilux — Automotive Promo Pubmat',
+      images: [
+        {
+          src: '/pubmat/toyota.jpg',
+          caption: 'Toyota Hilux Showcase — Automotive Advertising Pubmat',
+        },
+      ],
+      featured: true,
+    },
+    {
+      id: 'pubmat-uniqlo',
+      category: 'pubmat',
+      categoryLabel: 'PUBMAT',
+      title: 'UNIQLO Sweatshirt — Fashion Retail Pubmat',
+      images: [
+        {
+          src: '/pubmat/UNIQLO.jpg',
+          caption: 'UNIQLO Sweatshirt Limited Offer — Retail Product Pubmat',
+        },
+      ],
+      featured: true,
+    },
+    {
+      id: 'pubmat-penshoppe',
+      category: 'pubmat',
+      categoryLabel: 'PUBMAT',
+      title: 'Penshoppe — Streetwear Campaign Pubmat',
+      images: [
+        {
+          src: '/pubmat/penshoppe.jpg',
+          caption: 'Penshoppe Apparel & Streetwear — Brand Campaign Pubmat',
+        },
+      ],
+      featured: true,
+    },
+    {
+      id: 'pubmat-jandoee-quotes',
+      category: 'pubmat',
+      categoryLabel: 'PUBMAT',
+      title: 'Jandoee — Aura Gradient Quote Pubmat Series',
+      images: [
+        {
+          src: '/pubmat/1st.png',
+          caption: 'Jandoee Motivational Quote Series — Layout 1',
+        },
+        {
+          src: '/pubmat/2nd.png',
+          caption: 'Jandoee Motivational Quote Series — Layout 2',
+        },
+        {
+          src: '/pubmat/3rd.png',
+          caption: 'Jandoee Motivational Quote Series — Layout 3',
+        },
+        {
+          src: '/pubmat/4th.jpg',
+          caption: 'Jandoee Motivational Quote Series — Layout 4',
+        },
+      ],
+      featured: true,
+    },
     {
       id: 'video-kevin-hart',
       category: 'video-editing',
